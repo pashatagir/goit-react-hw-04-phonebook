@@ -17,7 +17,7 @@ const App = () => {
   const localContacts = JSON.parse(localStorage.getItem('contacts'));
 
   const visibleContacts =
-    localContacts.length > 0 ? localContacts : initialValue;
+    localContacts?.length > 0 ? localContacts : initialValue;
 
   const [contacts, setContacts] = useState(visibleContacts);
   const [filter, setFilter] = useState('');
